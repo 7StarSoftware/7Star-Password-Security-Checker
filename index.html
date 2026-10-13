@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="description" content="Check password strength instantly with a private, browser-based password security checker.">
+  <title>Password Security Checker | 7Star Software 🇵🇰</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="7Star Software home">
+        <span class="brand-mark">7★</span>
+        <span><strong>7Star Software 🇵🇰</strong><small>SECURITY TOOLS</small></span>
+      </a>
+      <span class="privacy-pill"><span class="live-dot"></span> Runs locally in your browser</span>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow"><span>✦</span> PASSWORD HEALTH CHECK</div>
+      <h1>Make your password<br><span>hard to crack.</span></h1>
+      <p class="hero-copy">Check its estimated strength in seconds. Your password is analysed on this device and is never sent to our server by this tool.</p>
+    </section>
+
+    <section class="checker card" aria-labelledby="checker-title">
+      <div class="section-heading">
+        <div>
+          <p class="kicker">LIVE ANALYSIS</p>
+          <h2 id="checker-title">Check your password</h2>
+        </div>
+        <span class="lock-icon" aria-hidden="true">⌑</span>
+      </div>
+
+      <label for="password">Enter password</label>
+      <div class="password-wrap">
+        <input id="password" type="password" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Type a password to test…" aria-describedby="privacy-note">
+        <button id="toggle" class="show-btn" type="button">Show</button>
+      </div>
+      <p id="privacy-note" class="privacy-note"><span>🔒</span> Private check — the password stays in this browser.</p>
+
+      <div class="score-area">
+        <div class="score-copy">
+          <div class="score-number"><span id="score">0</span><small>%</small></div>
+          <div id="strength" class="strength">Enter a password</div>
+          <p id="summary">Your estimated strength will appear here.</p>
+        </div>
+        <div id="shield" class="shield" aria-hidden="true">🛡️</div>
+      </div>
+      <div class="progress-track" role="progressbar" aria-label="Estimated password strength" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress">
+        <div id="progress-fill" class="progress-fill"></div>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><span>Password length</span><strong id="length">0 characters</strong></div>
+        <div class="stat"><span>Character variety</span><strong id="variety">0 of 4 types</strong></div>
+      </div>
+
+      <div class="checklist-section">
+        <div class="subhead"><h3>Security checklist</h3><span id="passed-count">0 / 8</span></div>
+        <div id="checks" class="checks">
+          <p class="empty-state">Start typing to check each security rule.</p>
+        </div>
+      </div>
+
+      <div class="tips-box">
+        <div class="tips-icon">✦</div>
+        <div><h3 id="tips-title">Tips for a stronger password</h3><ul id="tips"><li>Use 12–16 or more characters.</li><li>Never reuse passwords across accounts.</li><li>A password manager can create and store unique passwords.</li></ul></div>
+      </div>
+      <button id="clear" class="clear-btn" type="button">Clear password <span aria-hidden="true">↺</span></button>
+      <p class="disclaimer">The percentage is an educational estimate based on common password-strength signals, not a guarantee against cracking. This checker does not query breached-password databases.</p>
+    </section>
+
+    <section class="bottom-note">
+      <div class="note-icon">i</div>
+      <p><strong>Good to know</strong><br>Length and uniqueness matter. Avoid names, birthdays, common phrases, and passwords you've used elsewhere.</p>
+    </section>
+
+    <footer>Developed By <strong>7Star Software 🇵🇰</strong><span>Privacy-first password checking</span></footer>
+  </main>
+  <script src="/script.js"></script>
+</body>
+</html>
